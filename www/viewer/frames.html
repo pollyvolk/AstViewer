@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="external/codemirror/lib/codemirror.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="external/codemirror/lib/codemirror.js"></script>
+    <script src="external/http_unpkg.com_split.js_dist_split.js"></script>
+    <script src="external/codemirror/mode/javascript/javascript.js"></script>
+    <script src="external/codemirror/mode/clike/clike.js"></script>
+    <script src="lib.js"></script>
+    <title>AST viewer</title>
+</head>
+<body>
+<div id="horizontal-bar">
+    <div class="bar-item">
+        <label for="file" class="btn btn-file">Upload file</label>
+        <input id="file" name="jsonFile" type="file" accept=".json"/>
+        <label id="fileStatus">No file was uploaded</label>
+    </div>
+    <div id="languageItem" style="display:none" class="bar-item">Language:<span id="language"></span></div>
+    <div id="astSelector" class="bar-item" style="display:none">
+        <label>Choose AST:</label>
+        <input id="selectorInput" type="text" list="ASTs" />
+        <datalist id="ASTs">
+        </datalist>
+    </div>
+</div>
+<div id="code" class="split split-horizontal">
+</div>
+<div id="tree" class="split split-horizontal">
+    <div id="json" class="split content">
+    </div>
+</div>
+
+<script src="actions.js"></script>
+<script src="events.js"></script>
+<script src="jsonViewer.js"></script>
+<script src="codeHandlers.js"></script>
+<script src="astDataHandlers.js"></script>
+</body>
+<script>
+    var twoCodeBlocks = '' +
+        '<div id="source" class="split content">\n' +
+        '        <textarea id="source-view" class="codemirror"></textarea>\n' +
+        '</div>\n' +
+        '<div id="target" class="split content">\n' +
+        '        <textarea id="target-view" class="codemirror"></textarea>\n' +
+        '</div>';
+    var oneCodeBlock = '' +
+        '<div id="source" class="split content">\n' +
+        '        <textarea id="source-view" class="codemirror"></textarea>\n' +
+        '</div>'
+    var srcCode;
+    var tgtCode;
+    var dataByLang;
+    var astData;
+    var kind;
+    var astLanguage;
+    var verticalSplit;
+    var horizontalSplit;
+</script>
+</html>
