@@ -3,12 +3,15 @@
   "version": "1.0.0",
   "description": "This tool allows you to view existing abstract syntax trees (AST) stored in JSON format. \r It is also possible to view patterns based on ASTs.",
   "jest": {
-    "testRegex": "www/viewer/.*\\.(js|jsx)$",
+    "testRegex": "\\.test\\.js$",
     "roots": [
       "<rootDir>/www/viewer"
     ],
     "modulePaths": [
       "<rootDir>/www/viewer"
+    ],
+    "modulePathIgnorePatterns": [
+      "<rootDir>/www/viewer/external"
     ],
     "moduleDirectories": [
       "node_modules"
