@@ -102,3 +102,5 @@ function jsonViewer(json, collapsible=false) {
     }
     return parseObject(json);
 }
+
+module.exports = jsonViewer;

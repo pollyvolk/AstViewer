@@ -1,0 +1,34 @@
+{
+  "name": "astviewer",
+  "version": "1.0.0",
+  "description": "This tool allows you to view existing abstract syntax trees (AST) stored in JSON format. \r It is also possible to view patterns based on ASTs.",
+  "jest": {
+    "testRegex": "www/viewer/.*\\.(js|jsx)$",
+    "roots": [
+      "<rootDir>/www/viewer"
+    ],
+    "modulePaths": [
+      "<rootDir>/www/viewer"
+    ],
+    "moduleDirectories": [
+      "node_modules"
+    ]
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pollyvolk/AstViewer.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pollyvolk/AstViewer/issues"
+  },
+  "homepage": "https://github.com/pollyvolk/AstViewer#readme",
+  "devDependencies": {
+    "jest": "^27.4.7"
+  }
+}
