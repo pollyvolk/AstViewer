@@ -5,7 +5,7 @@ Intellij  files
 # target files
 **/target
 **/out
-
+**/node_modules
 
 # Package Files #
 *.war
