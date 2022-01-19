@@ -34,6 +34,7 @@ function parseJson(jsonData) {
             }
         }
         handleAst(0);
+        addJsonEvents();
         languageLabel.innerText = languages.toString();
     } else if (json.ast != null) {
         document.getElementById("astSelector").style.display = "none";

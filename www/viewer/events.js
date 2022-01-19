@@ -16,7 +16,7 @@ addEvent("file", "change", function() {
         reader.readAsText(file);
     } else {
         document.getElementById("languageItem").style.display = "none";
-        document.getElementById("fileStatus").innerHTML = "Недопустимый тип файла. Измените свой выбор!";
+        document.getElementById("fileStatus").innerHTML = "Invalid file type. Change your choice!";
     }
 });
 
